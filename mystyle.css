@@ -37,6 +37,164 @@
     transform: scale(0.23);
 }
 /* Esercizio 6 */
-.ex-6-square:hover{
+.ex-6-img{
+    transition: 0s;
+}
+.ex-6-img:hover{
     filter: grayscale(1);
+}
+/* Esercizio 7 */
+.ex-7-img {
+    transition: 3s;
+}
+.ex-7-img:hover {
+    filter: grayscale(.5) sepia(.5);
+}
+/* Esercizio 8 */
+.ex-8-img {
+    transition: 3s;
+}
+.ex-8-img:hover {
+    filter: contrast(25%) sepia(.5);
+    border-radius: 50%;
+}
+/* Esercizio 9 */
+.ex-9-img {
+    transition: 3s;
+}
+.ex-9-img:hover {
+    filter: contrast(75%) sepia(.5);
+    border-radius: 30%;
+    transform: scale(2);
+}
+/* Esercizio 10 */
+.ex-10-icon {
+    animation-name: spin;
+    animation-duration: 2300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+/* Esercizio 11 */
+.ex-11-icon:hover {
+    animation: spinWeird 2.3s linear;
+}
+@keyframes spinWeird {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+/* Esercizio 12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveUpperBlank 1.5s linear;
+}
+@keyframes moveUpperBlank {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveLowerBlank 1.5s linear;
+}
+@keyframes moveLowerBlank {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+/* Esercizio 13 */
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveUpperBlank_2 2s linear;
+}
+@keyframes moveUpperBlank_2 {
+    /* Il div blank ha dimensioni 60x20 */
+
+    /* situazione iniziale: alto a "sinistra" */
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    /* angolo alto a desrta */
+    20% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    /* basso a destra */
+    35% {
+        left: calc(100% - 30px);
+        top: calc(100% - 10px);
+    }
+    /* basso a sinistra */
+    65% {
+        left: -30px;
+        top: calc(100% - 10px);
+    }
+    /* alto a sinistra */
+    80% {
+        left: -30px;
+        top: -10px;
+    }
+    /* posizione iniziale==finale */
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: moveLowerBlank_2 3s linear;
+}
+@keyframes moveLowerBlank_2 {
+    /* Il div blank ha dimensioni 60x20 */
+    0% {
+        right: 20%;
+        bottom: -10px;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: calc(100% - 10px);
+    }
+    75% {
+        right: -30px;
+        bottom: calc(100% - 10px);
+    }
+    90% {
+        right: -30px;
+        bottom: -10px;
+    }
+    100% {
+        right: 20%;
+        bottom: -10px;
+    }
+}
+/* si vede un pezzo di spazio "vuoto" che esce dal well, let's fix it */
+.well{
+    overflow: hidden;
 }
